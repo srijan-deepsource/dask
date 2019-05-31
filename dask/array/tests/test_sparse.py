@@ -83,6 +83,8 @@ def test_tensordot():
     xx = x.map_blocks(sparse.COO.from_numpy)
     yy = y.map_blocks(sparse.COO.from_numpy)
 
+    assert isinstance(da.tensordot(xx, yy, axes=(2, 0))._meta, type(xx._meta))
+
     assert_eq(da.tensordot(x, y, axes=(2, 0)),
               da.tensordot(xx, yy, axes=(2, 0)))
     assert_eq(da.tensordot(x, y, axes=(1, 1)),

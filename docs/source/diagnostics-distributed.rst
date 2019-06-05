@@ -76,6 +76,16 @@ For more information we recommend the following video guide:
             allowfullscreen>
     </iframe>
 
+Saving Plots
+------------
+
+Some of the plots on the dashboard can be saved for offline use.  In
+particular, see the following functions:
+
+.. autosummary::
+   get_task_stream
+   Client.profile
+
 External Documentation
 ----------------------
 
@@ -86,3 +96,5 @@ API
 ---
 
 .. autofunction:: progress
+.. autofunction:: get_task_stream
+.. automethod:: Client.profile

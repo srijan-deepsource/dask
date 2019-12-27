@@ -15,7 +15,7 @@ Core
 
 -  xfail test_temporary_directory on Python 3.8 (:pr:`5734`) `James Bourbeau`_
 -  Add support for Python 3.8 (:pr:`5603`) `James Bourbeau`_
--  Use id to dedupe constants in rewrite_blockwise (:pr:`5696`) `Jim Crist`_
+-  Use id to dedupe constants in rewrite_blockwise (:pr:`5696`) `Jim Crist-Hanif`_
 
 DataFrame
 +++++++++
@@ -252,7 +252,7 @@ Core
 
 -  Add sentinel no_default to get_dependencies task (:pr:`5420`) `James Bourbeau`_
 -  Update fsspec version (:pr:`5415`) `Matthew Rocklin`_
--  Remove PY2 checks (:pr:`5400`) `Jim Crist`_
+-  Remove PY2 checks (:pr:`5400`) `Jim Crist-Hanif`_
 
 DataFrame
 +++++++++
@@ -292,7 +292,7 @@ Array
 Core
 ++++
 
-- Remove deprecated code (:pr:`5401`) `Jim Crist`_
+- Remove deprecated code (:pr:`5401`) `Jim Crist-Hanif`_
 - Fix ``funcname`` when vectorized func has no ``__name__`` (:pr:`5399`) `James Bourbeau`_
 - Truncate ``funcname`` to avoid long key names (:pr:`5383`) `Matthew Rocklin`_
 - Add support for ``numpy.vectorize`` in ``funcname`` (:pr:`5396`) `James Bourbeau`_
@@ -359,10 +359,10 @@ Core
 - Set strict xfail option (:pr:`5220`) `James Bourbeau`_
 - test-upstream (:pr:`5267`) `Tom Augspurger`_
 - Fixed HDFS CI failure (:pr:`5234`) `Tom Augspurger`_
-- Error nicely if no file size inferred (:pr:`5231`) `Jim Crist`_
-- A few changes to ``config.set`` (:pr:`5226`) `Jim Crist`_
-- Fixup black string normalization (:pr:`5227`) `Jim Crist`_
-- Pin NumPy in windows tests (:pr:`5228`) `Jim Crist`_
+- Error nicely if no file size inferred (:pr:`5231`) `Jim Crist-Hanif`_
+- A few changes to ``config.set`` (:pr:`5226`) `Jim Crist-Hanif`_
+- Fixup black string normalization (:pr:`5227`) `Jim Crist-Hanif`_
+- Pin NumPy in windows tests (:pr:`5228`) `Jim Crist-Hanif`_
 - Ensure parquet tests are skipped if fastparquet and pyarrow not installed (:pr:`5217`) `James Bourbeau`_
 - Add fsspec to readthedocs (:pr:`5207`) `Matthew Rocklin`_
 - Bump NumPy and Pandas to 1.17 and 0.25 in CI test (:pr:`5179`) `John A Kirkham`_
@@ -446,14 +446,14 @@ DataFrame
 -  Avoid unnecessary aggregation in pivot_table (:pr:`5173`) `Daniel Saxton`_
 -  Add column names to apply_and_enforce error message (:pr:`5180`) `Matthew Rocklin`_
 -  Add schema keyword argument to to_parquet (:pr:`5150`) `Sarah Bird`_
--  Remove recursion error in accessors (:pr:`5182`) `Jim Crist`_
+-  Remove recursion error in accessors (:pr:`5182`) `Jim Crist-Hanif`_
 -  Allow fastparquet to handle gather_statistics=False for file lists (:pr:`5157`) `Richard J Zamora`_
 
 Documentation
 +++++++++++++
 
 -  Adds NumFOCUS badge to the README (:pr:`5086`) `James Bourbeau`_
--  Update developer docs [ci skip] (:pr:`5093`) `Jim Crist`_
+-  Update developer docs [ci skip] (:pr:`5093`) `Jim Crist-Hanif`_
 -  Document DataFrame.set_index computataion behavior `Natalya Rapstine`_
 -  Use pip install . instead of calling setup.py (:pr:`5139`) `Matthias Bussonier`_
 -  Close user survey (:pr:`5147`) `Tom Augspurger`_
@@ -557,7 +557,7 @@ Array
 Core
 ++++
 
--  **Drop Python 2.7** (:pr:`4919`) `Jim Crist`_
+-  **Drop Python 2.7** (:pr:`4919`) `Jim Crist-Hanif`_
 -  Quiet dependency installs in CI (:pr:`4960`) `Tom Augspurger`_
 -  Raise on warnings in tests (:pr:`4916`) `Tom Augspurger`_
 -  Add a diagnostics extra to setup.py (includes bokeh) (:pr:`4924`) `John A Kirkham`_
@@ -656,7 +656,7 @@ Core
 - Add core dask config file to MANIFEST.in (:pr:`4780`) `James Bourbeau`_
 - Enabling glob with HTTP file-system (:pr:`3926`) `Martin Durant`_
 - HTTPFile.seek with whence=1 (:pr:`4751`) `Martin Durant`_
-- Remove config key normalization (:pr:`4742`) `Jim Crist`_
+- Remove config key normalization (:pr:`4742`) `Jim Crist-Hanif`_
 
 DataFrame
 +++++++++
@@ -667,7 +667,7 @@ DataFrame
 - Remove explicit pandas check in cumulative aggregations (:pr:`4765`) `Nick Becker`_
 - Added meta for read_json and test (:pr:`4588`) `Abhinav Ralhan`_
 - Add test for dtype casting (:pr:`4760`) `Martin Durant`_
-- Document alignment in map_partitions (:pr:`4757`) `Jim Crist`_
+- Document alignment in map_partitions (:pr:`4757`) `Jim Crist-Hanif`_
 - Implement Series.str.split(expand=True) (:pr:`4744`) `Matthew Rocklin`_
 
 Documentation
@@ -703,7 +703,7 @@ Core
 ++++
 
 -  Delay long list arguments (:pr:`4735`) `Matthew Rocklin`_
--  Bump to numpy >= 1.13, pandas >= 0.21.0 (:pr:`4720`) `Jim Crist`_
+-  Bump to numpy >= 1.13, pandas >= 0.21.0 (:pr:`4720`) `Jim Crist-Hanif`_
 -  Remove file "test" (:pr:`4710`) `James Bourbeau`_
 -  Reenable development build, uses upstream libraries (:pr:`4696`) `Peter Andreas Entschev`_
 -  Remove assertion in HighLevelGraph constructor (:pr:`4699`) `Matthew Rocklin`_
@@ -712,12 +712,12 @@ DataFrame
 +++++++++
 
 -  Change cum-aggregation last-nonnull-value algorithm (:pr:`4736`) `Nick Becker`_
--  Fixup series-groupby-apply (:pr:`4738`) `Jim Crist`_
+-  Fixup series-groupby-apply (:pr:`4738`) `Jim Crist-Hanif`_
 -  Refactor array.percentile and dataframe.quantile to use t-digest (:pr:`4677`) `Janne Vuorela`_
 -  Allow naive concatenation of sorted dataframes (:pr:`4725`) `Matthew Rocklin`_
--  Fix perf issue in dd.Series.isin (:pr:`4727`) `Jim Crist`_
+-  Fix perf issue in dd.Series.isin (:pr:`4727`) `Jim Crist-Hanif`_
 -  Remove hard pandas dependency for melt by using methodcaller (:pr:`4719`) `Nick Becker`_
--  A few dataframe metadata fixes (:pr:`4695`) `Jim Crist`_
+-  A few dataframe metadata fixes (:pr:`4695`) `Jim Crist-Hanif`_
 -  Add Dataframe.replace (:pr:`4714`) `Matthew Rocklin`_
 -  Add 'threshold' parameter to pd.DataFrame.dropna (:pr:`4625`) `Nathan Matare`_
 
@@ -881,14 +881,14 @@ Array
 
 -  Fix another unicode/mixed-type edge case in normalize_array (:pr:`4489`) `Marco Neumann`_
 -  Add dask.array.diagonal (:pr:`4431`) `Danilo Horta`_
--  Call asanyarray in unify_chunks (:pr:`4506`) `Jim Crist`_
+-  Call asanyarray in unify_chunks (:pr:`4506`) `Jim Crist-Hanif`_
 -  Modify moment chunk functions to return dicts (:pr:`4519`) `Peter Andreas Entschev`_
 
 
 Bag
 +++
 
--  Don't inline output keys in dask.bag (:pr:`4464`) `Jim Crist`_
+-  Don't inline output keys in dask.bag (:pr:`4464`) `Jim Crist-Hanif`_
 -  Ensure that bag.from_sequence always includes at least one partition (:pr:`4475`) `Anderson Banihirwe`_
 -  Implement out_type for bag.fold (:pr:`4502`) `Matthew Rocklin`_
 -  Remove map from bag keynames (:pr:`4500`) `Matthew Rocklin`_
@@ -900,16 +900,16 @@ DataFrame
 
 -  Fix relative path parsing on windows when using fastparquet (:pr:`4445`) `Janne Vuorela`_
 -  Fix bug in pyarrow and hdfs (:pr:`4453`) (:pr:`4455`) `Michał Jastrzębski`_
--  df getitem with integer slices is not implemented (:pr:`4466`) `Jim Crist`_
+-  df getitem with integer slices is not implemented (:pr:`4466`) `Jim Crist-Hanif`_
 -  Replace cudf-specific code with dask-cudf import (:pr:`4470`) `Matthew Rocklin`_
 -  Avoid groupby.agg(callable) in groupby-var (:pr:`4482`) `Matthew Rocklin`_
 -  Consider uint types as numerical in check_meta (:pr:`4485`) `Marco Neumann`_
 -  Fix some typos in groupby comments (:pr:`4494`) `Daniel Saxton`_
 -  Add error message around set_index(inplace=True) (:pr:`4501`) `Matthew Rocklin`_
--  meta_nonempty works with categorical index (:pr:`4505`) `Jim Crist`_
+-  meta_nonempty works with categorical index (:pr:`4505`) `Jim Crist-Hanif`_
 -  Add module name to expected meta error message (:pr:`4499`) `Matthew Rocklin`_
--  groupby-nunique works on empty chunk (:pr:`4504`) `Jim Crist`_
--  Propogate index metadata if not specified (:pr:`4509`) `Jim Crist`_
+-  groupby-nunique works on empty chunk (:pr:`4504`) `Jim Crist-Hanif`_
+-  Propogate index metadata if not specified (:pr:`4509`) `Jim Crist-Hanif`_
 
 Documentation
 +++++++++++++
@@ -941,7 +941,7 @@ DataFrame
 +++++++++
 
 -  Lazily register more cudf functions and move to backends file (:pr:`4396`) `Matthew Rocklin`_
--  Fix ORC tests for pyarrow 0.12.0 (:pr:`4413`) `Jim Crist`_
+-  Fix ORC tests for pyarrow 0.12.0 (:pr:`4413`) `Jim Crist-Hanif`_
 -  rearrange_by_column: ensure that shuffle arg defaults to 'disk' if it's None in dask.config (:pr:`4414`) `George Sakkis`_
 -  Implement filters for _read_pyarrow (:pr:`4415`) `George Sakkis`_
 -  Avoid checking against types in is_dataframe_like (:pr:`4418`) `Matthew Rocklin`_
@@ -978,7 +978,7 @@ Array
 -  Use chunks="auto" in array creation routines (:pr:`4354`) `Matthew Rocklin`_
 -  Fix np.matmul in dask.array.Array.__array_ufunc__ (:pr:`4363`) `Stephan Hoyer`_
 -  COMPAT: Re-enable multifield copy->view change (:pr:`4357`) `Diane Trout`_
--  Calling np.dtype on a delayed object works (:pr:`4387`) `Jim Crist`_
+-  Calling np.dtype on a delayed object works (:pr:`4387`) `Jim Crist-Hanif`_
 -  Rework normalize_array for numpy data (:pr:`4312`) `Marco Neumann`_
 
 DataFrame
@@ -1001,7 +1001,7 @@ Documentation
 +++++++++++++
 
 -  Fix link to 'map_blocks' function in array api docs (:pr:`4258`) `David Hoese`_
--  Add a paragraph on Dask-Yarn in the cloud docs (:pr:`4260`) `Jim Crist`_
+-  Add a paragraph on Dask-Yarn in the cloud docs (:pr:`4260`) `Jim Crist-Hanif`_
 -  Copy edit documentation (:pr:`4267`), (:pr:`4263`), (:pr:`4262`), (:pr:`4277`), (:pr:`4271`), (:pr:`4279`), (:pr:`4265`), (:pr:`4295`), (:pr:`4293`), (:pr:`4296`), (:pr:`4302`), (:pr:`4306`), (:pr:`4318`), (:pr:`4314`), (:pr:`4309`), (:pr:`4317`), (:pr:`4326`), (:pr:`4325`), (:pr:`4322`), (:pr:`4332`), (:pr:`4333`), `Miguel Farrajota`_
 -  Fix typo in code example (:pr:`4272`) `Daniel Li`_
 -  Doc: Update array-api.rst (:pr:`4259`) (:pr:`4282`) `Prabakaran Kumaresshan`_
@@ -1029,7 +1029,7 @@ Core
 -  Move dask/array/top.py code to dask/blockwise.py (:pr:`4348`) `Matthew Rocklin`_
 -  Add has_parallel_type (:pr:`4395`) `Matthew Rocklin`_
 -  CI: Update Appveyor (:pr:`4381`) `Tom Augspurger`_
--  Ignore non-readable config files (:pr:`4388`) `Jim Crist`_
+-  Ignore non-readable config files (:pr:`4388`) `Jim Crist-Hanif`_
 
 
 1.0.0 / 2018-11-28
@@ -1059,7 +1059,7 @@ Core
 
 -  Avoid a few warnings (:pr:`4223`) `Matthew Rocklin`_
 -  Remove dask.store module (:pr:`4221`) `Matthew Rocklin`_
--  Remove AUTHORS.md `Jim Crist`_
+-  Remove AUTHORS.md `Jim Crist-Hanif`_
 
 
 0.20.2 / 2018-11-15
@@ -1216,7 +1216,7 @@ Array
 +++++
 
 -   Make da.RandomState extensible to other modules (:pr:`4041`) `Matthew Rocklin`_
--   Support unknown dims in ravel no-op case (:pr:`4055`) `Jim Crist`_
+-   Support unknown dims in ravel no-op case (:pr:`4055`) `Jim Crist-Hanif`_
 -   Add basic infrastructure for cupy (:pr:`4019`) `Matthew Rocklin`_
 -   Avoid asarray and lock arguments for from_array(getitem) (:pr:`4044`) `Matthew Rocklin`_
 -   Move local imports in `corrcoef` to global imports (:pr:`4030`) `John A Kirkham`_
@@ -1239,8 +1239,8 @@ Dataframe
 
 -   Added an ``index`` parameter to :meth:`dask.dataframe.from_dask_array` for creating a dask DataFrame from a dask Array with a given index. (:pr:`3991`) `Tom Augspurger`_
 -   Improve sub-classability of dask dataframe (:pr:`4015`) `Matthew Rocklin`_
--   Fix failing hdfs test [test-hdfs] (:pr:`4046`) `Jim Crist`_
--   fuse_subgraphs works without normal fuse (:pr:`4042`) `Jim Crist`_
+-   Fix failing hdfs test [test-hdfs] (:pr:`4046`) `Jim Crist-Hanif`_
+-   fuse_subgraphs works without normal fuse (:pr:`4042`) `Jim Crist-Hanif`_
 -   Make path for reading many parquet files without prescan (:pr:`3978`) `Martin Durant`_
 -   Index in dd.from_dask_array (:pr:`3991`) `Tom Augspurger`_
 -   Making skiprows accept lists (:pr:`3975`) `Julia Signell`_
@@ -1251,7 +1251,7 @@ Core
 
 -   Add support for npartitions=1 edge case in groupby (:pr:`4050`) `James Bourbeau`_
 -   Automatically wrap large arguments with dask.delayed in map_blocks/partitions (:pr:`4002`) `Matthew Rocklin`_
--   Fuse linear chains of subgraphs (:pr:`3979`) `Jim Crist`_
+-   Fuse linear chains of subgraphs (:pr:`3979`) `Jim Crist-Hanif`_
 -   Make multiprocessing context configurable (:pr:`3763`) `Itamar Turner-Trauring`_
 
 Documentation
@@ -1334,7 +1334,7 @@ Array
 -  Allow shape of dask.array to be a numpy array (:pr:`3844`) `Mark Harfouche`_
 -  Fix numpy deprecation warning on tuple indexing (:pr:`3851`) `Tobias de Jong`_
 -  Rename ghost module to overlap (:pr:`3830`) `Robert Sare`_
--  Re-add the ghost import to da __init__ (:pr:`3861`) `Jim Crist`_
+-  Re-add the ghost import to da __init__ (:pr:`3861`) `Jim Crist-Hanif`_
 -  Ensure copy preserves masked arrays (:pr:`3852`) `Tobias de Jong`_
 
 DataFrame
@@ -1351,8 +1351,8 @@ DataFrame
 -  When reading multiple paths, expand globs. (:pr:`3828`) `Irina Truong`_
 -  Added index column name after resample (:pr:`3833`) `Eric Bonfadini`_
 -  Add (lazy) shape property to dataframe and series (:pr:`3212`) `Henrique Ribeiro`_
--  Fix failing hdfs test [test-hdfs] (:pr:`3858`) `Jim Crist`_
--  Fixes for pyarrow 0.10.0 release (:pr:`3860`) `Jim Crist`_
+-  Fix failing hdfs test [test-hdfs] (:pr:`3858`) `Jim Crist-Hanif`_
+-  Fixes for pyarrow 0.10.0 release (:pr:`3860`) `Jim Crist-Hanif`_
 -  Rename to_csv keys for diagnostics (:pr:`3890`) `Matthew Rocklin`_
 -  Match pandas warnings for concat sort (:pr:`3897`) `Tom Augspurger`_
 -  Include filename in read_csv (:pr:`3908`) `Julia Signell`_
@@ -1361,11 +1361,11 @@ Core
 ++++
 
 -  Better error message on import when missing common dependencies (:pr:`3771`) `Danilo Horta`_
--  Drop Python 3.4 support (:pr:`3840`) `Jim Crist`_
--  Remove expired deprecation warnings (:pr:`3841`) `Jim Crist`_
+-  Drop Python 3.4 support (:pr:`3840`) `Jim Crist-Hanif`_
+-  Remove expired deprecation warnings (:pr:`3841`) `Jim Crist-Hanif`_
 -  Add DASK_ROOT_CONFIG environment variable (:pr:`3849`) `Joe Hamman`_
--  Don't cull in local scheduler, do cull in delayed (:pr:`3856`) `Jim Crist`_
--  Increase conda download retries (:pr:`3857`) `Jim Crist`_
+-  Don't cull in local scheduler, do cull in delayed (:pr:`3856`) `Jim Crist-Hanif`_
+-  Increase conda download retries (:pr:`3857`) `Jim Crist-Hanif`_
 -  Add python_requires and Trove classifiers (:pr:`3855`) `@hugovk`_
 -  Fix collections.abc deprecation warnings in Python 3.7.0 (:pr:`3876`) `Jan Margeta`_
 -  Allow dot jpeg to xfail in visualize tests (:pr:`3896`) `Matthew Rocklin`_
@@ -1376,7 +1376,7 @@ Docs
 ++++
 
 -  Fix typo in import statement of diagnostics (:pr:`3826`) `John Mrziglod`_
--  Add link to YARN docs (:pr:`3838`) `Jim Crist`_
+-  Add link to YARN docs (:pr:`3838`) `Jim Crist-Hanif`_
 -  fix of minor typos in landing page index.html (:pr:`3746`) `Christoph Moehl`_
 -  Update delayed-custom.rst (:pr:`3850`) `Anderson Banihirwe`_
 -  DOC: clarify delayed docstring (:pr:`3709`) `Scott Sievert`_
@@ -1466,7 +1466,7 @@ Core
 
 - Minor tweaks to CI (:pr:`3629`) `Guido Imperiale`_
 - Add back dask.utils.effective_get (:pr:`3642`) `Matthew Rocklin`_
-- DASK_CONFIG dictates config write location (:pr:`3621`) `Jim Crist`_
+- DASK_CONFIG dictates config write location (:pr:`3621`) `Jim Crist-Hanif`_
 - Replace 'collections' key in unpack_collections with unique key (:pr:`3632`) `Yu Feng`_
 - Avoid deepcopy in dask.config.set (:pr:`3649`) `Matthew Rocklin`_
 
@@ -1602,7 +1602,7 @@ DataFrame
 Core
 ++++
 
-- Support traversing collections in persist, visualize, and optimize (:pr:`3410`) `Jim Crist`_
+- Support traversing collections in persist, visualize, and optimize (:pr:`3410`) `Jim Crist-Hanif`_
 - Add schedule= keyword to compute and persist.  This replaces common use of the get= keyword (:pr:`3448`) `Matthew Rocklin`_
 
 
@@ -1682,12 +1682,12 @@ DataFrame
 - Support month timedeltas in repartition(freq=...) (:pr:`3110`) `Matthew Rocklin`_
 - Avoid mutation in dataframe groupby tests (:pr:`3118`) `Matthew Rocklin`_
 - ``read_csv``, ``read_table``, and ``read_parquet`` accept iterables of paths
-  (:pr:`3124`) `Jim Crist`_
+  (:pr:`3124`) `Jim Crist-Hanif`_
 - Deprecates the ``dd.to_delayed`` *function* in favor of the existing method
-  (:pr:`3126`) `Jim Crist`_
+  (:pr:`3126`) `Jim Crist-Hanif`_
 - Return dask.arrays from df.map_partitions calls when the UDF returns a numpy array (:pr:`3147`) `Matthew Rocklin`_
 - Change handling of ``columns`` and ``index`` in ``dd.read_parquet`` to be more
-  consistent, especially in handling of multi-indices (:pr:`3149`) `Jim Crist`_
+  consistent, especially in handling of multi-indices (:pr:`3149`) `Jim Crist-Hanif`_
 - fastparquet append=True allowed to create new dataset (:pr:`3097`) `Martin Durant`_
 - dtype rationalization for sql queries (:pr:`3100`) `Martin Durant`_
 
@@ -1702,18 +1702,18 @@ Core
 - Change default task ordering to prefer nodes with few dependents and then
   many downstream dependencies (:pr:`3056`) `Matthew Rocklin`_
 - Add color= option to visualize to color by task order (:pr:`3057`) (:pr:`3122`) `Matthew Rocklin`_
-- Deprecate ``dask.bytes.open_text_files`` (:pr:`3077`) `Jim Crist`_
+- Deprecate ``dask.bytes.open_text_files`` (:pr:`3077`) `Jim Crist-Hanif`_
 - Remove short-circuit hdfs reads handling due to maintenance costs. May be
-  re-added in a more robust manner later (:pr:`3079`) `Jim Crist`_
+  re-added in a more robust manner later (:pr:`3079`) `Jim Crist-Hanif`_
 - Add ``dask.base.optimize`` for optimizing multiple collections without
-  computing. (:pr:`3071`) `Jim Crist`_
-- Rename ``dask.optimize`` module to ``dask.optimization`` (:pr:`3071`) `Jim Crist`_
+  computing. (:pr:`3071`) `Jim Crist-Hanif`_
+- Rename ``dask.optimize`` module to ``dask.optimization`` (:pr:`3071`) `Jim Crist-Hanif`_
 - Change task ordering to do a full traversal (:pr:`3066`) `Matthew Rocklin`_
 - Adds an ``optimize_graph`` keyword to all ``to_delayed`` methods to allow
-  controlling whether optimizations occur on conversion. (:pr:`3126`) `Jim Crist`_
-- Support using ``pyarrow`` for hdfs integration (:pr:`3123`) `Jim Crist`_
-- Move HDFS integration and tests into dask repo (:pr:`3083`) `Jim Crist`_
-- Remove write_bytes (:pr:`3116`) `Jim Crist`_
+  controlling whether optimizations occur on conversion. (:pr:`3126`) `Jim Crist-Hanif`_
+- Support using ``pyarrow`` for hdfs integration (:pr:`3123`) `Jim Crist-Hanif`_
+- Move HDFS integration and tests into dask repo (:pr:`3083`) `Jim Crist-Hanif`_
+- Remove write_bytes (:pr:`3116`) `Jim Crist-Hanif`_
 
 
 0.16.1 / 2018-01-09
@@ -1735,7 +1735,7 @@ Array
 - Add ``float_power`` ufunc (:pr:`2962`) (:pr:`2969`) `John A Kirkham`_
 - Compatability for changes to structured arrays in the upcoming NumPy 1.14 release (:pr:`2964`) `Tom Augspurger`_
 - Add ``block`` (:pr:`2650`) `John A Kirkham`_
-- Add ``frompyfunc`` (:pr:`3030`) `Jim Crist`_
+- Add ``frompyfunc`` (:pr:`3030`) `Jim Crist-Hanif`_
 - Add the ``return_stored`` option to ``store`` for chaining stored results (:pr:`2980`) `John A Kirkham`_
 
 DataFrame
@@ -1749,11 +1749,11 @@ DataFrame
 - Compatability for reading Parquet files written by PyArrow 0.8.0 (:pr:`2973`) `Tom Augspurger`_
 - Correctly handle the column name (`df.columns.name`) when reading in ``dd.read_parquet`` (:pr:`2973`) `Tom Augspurger`_
 - Fixed ``dd.concat`` losing the index dtype when the data contained a categorical (:issue:`2932`) `Tom Augspurger`_
-- Add ``dd.Series.rename`` (:pr:`3027`) `Jim Crist`_
+- Add ``dd.Series.rename`` (:pr:`3027`) `Jim Crist-Hanif`_
 - ``DataFrame.merge()`` now supports merging on a combination of columns and the index (:pr:`2960`) `Jon Mease`_
 - Removed the deprecated ``dd.rolling*`` methods, in preparation for their removal in the next pandas release (:pr:`2995`) `Tom Augspurger`_
-- Fix metadata inference bug in which single-partition series were mistakenly special cased (:pr:`3035`) `Jim Crist`_
-- Add support for ``Series.str.cat`` (:pr:`3028`) `Jim Crist`_
+- Fix metadata inference bug in which single-partition series were mistakenly special cased (:pr:`3035`) `Jim Crist-Hanif`_
+- Add support for ``Series.str.cat`` (:pr:`3028`) `Jim Crist-Hanif`_
 
 Core
 ++++
@@ -1780,12 +1780,12 @@ Array
 - Add ``asarray`` and ``asanyarray`` to Dask Array API docs (:pr:`2787`) `James Bourbeau`_
 - Support ``unique``'s ``return_*`` arguments (:pr:`2779`) `John A Kirkham`_
 - Simplify ``_unique_internal`` (:pr:`2850`) (:pr:`2855`) `John A Kirkham`_
-- Avoid removing some getter calls in array optimizations (:pr:`2826`) `Jim Crist`_
+- Avoid removing some getter calls in array optimizations (:pr:`2826`) `Jim Crist-Hanif`_
 
 DataFrame
 +++++++++
 
-- Support ``pyarrow`` in ``dd.to_parquet`` (:pr:`2868`) `Jim Crist`_
+- Support ``pyarrow`` in ``dd.to_parquet`` (:pr:`2868`) `Jim Crist-Hanif`_
 - Fixed ``DataFrame.quantile`` and ``Series.quantile`` returning ``nan`` when missing values are present (:pr:`2791`) `Tom Augspurger`_
 - Fixed ``DataFrame.quantile`` losing the result ``.name`` when ``q`` is a scalar (:pr:`2791`) `Tom Augspurger`_
 - Fixed ``dd.concat`` return a ``dask.Dataframe`` when concatenating a single series along the columns, matching pandas' behavior (:pr:`2800`) `James Munroe`_
@@ -1793,16 +1793,16 @@ DataFrame
 - Fix exception when calling ``DataFrame.set_index`` on text column where one of the partitions was empty (:pr:`2831`) `Jesse Vogt`_
 - Do not raise exception when calling ``DataFrame.set_index`` on empty dataframe (:pr:`2827`) `Jesse Vogt`_
 - Fixed bug in ``Dataframe.fillna`` when filling with a ``Series`` value (:pr:`2810`) `Tom Augspurger`_
-- Deprecate old argument ordering in ``dd.to_parquet`` to better match convention of putting the dataframe first (:pr:`2867`) `Jim Crist`_
-- df.astype(categorical_dtype -> known categoricals (:pr:`2835`) `Jim Crist`_
+- Deprecate old argument ordering in ``dd.to_parquet`` to better match convention of putting the dataframe first (:pr:`2867`) `Jim Crist-Hanif`_
+- df.astype(categorical_dtype -> known categoricals (:pr:`2835`) `Jim Crist-Hanif`_
 - Test against Pandas release candidate (:pr:`2814`) `Tom Augspurger`_
 - Add more tests for read_parquet(engine='pyarrow') (:pr:`2822`) `Uwe Korn`_
 - Remove unnecessary map_partitions in aggregate (:pr:`2712`) `Christopher Prohm`_
 - Fix bug calling sample on empty partitions (:pr:`2818`) `@xwang777`_
-- Error nicely when parsing dates in read_csv (:pr:`2863`) `Jim Crist`_
+- Error nicely when parsing dates in read_csv (:pr:`2863`) `Jim Crist-Hanif`_
 - Cleanup handling of passing filesystem objects to PyArrow readers (:pr:`2527`) `@fjetter`_
 - Support repartitioning even if there are no divisions (:pr:`2873`) `@Ced4`_
-- Support reading/writing to hdfs using ``pyarrow`` in ``dd.to_parquet`` (:pr:`2894`, :pr:`2881`) `Jim Crist`_
+- Support reading/writing to hdfs using ``pyarrow`` in ``dd.to_parquet`` (:pr:`2894`, :pr:`2881`) `Jim Crist-Hanif`_
 
 Core
 ++++
@@ -1812,13 +1812,13 @@ Core
 -  Auto-import gcsfs when gcs:// protocol is used (:pr:`2776`) `Matthew Rocklin`_
 -  Fully remove dask.async module, use dask.local instead (:pr:`2828`) `Thomas Caswell`_
 -  Compatability with bokeh 0.12.10 (:pr:`2844`) `Tom Augspurger`_
--  Reduce test memory usage (:pr:`2782`) `Jim Crist`_
--  Add Dask collection interface (:pr:`2748`) `Jim Crist`_
+-  Reduce test memory usage (:pr:`2782`) `Jim Crist-Hanif`_
+-  Add Dask collection interface (:pr:`2748`) `Jim Crist-Hanif`_
 -  Update Dask collection interface during XArray integration (:pr:`2847`) `Matthew Rocklin`_
--  Close resource profiler process on __exit__ (:pr:`2871`) `Jim Crist`_
--  Fix S3 tests (:pr:`2875`) `Jim Crist`_
+-  Close resource profiler process on __exit__ (:pr:`2871`) `Jim Crist-Hanif`_
+-  Fix S3 tests (:pr:`2875`) `Jim Crist-Hanif`_
 -  Fix port for bokeh dashboard in docs (:pr:`2889`) `Ian Hopkinson`_
--  Wrap Dask filesystems for PyArrow compatibility (:pr:`2881`) `Jim Crist`_
+-  Wrap Dask filesystems for PyArrow compatibility (:pr:`2881`) `Jim Crist-Hanif`_
 
 
 0.15.4 / 2017-10-06
@@ -2596,7 +2596,7 @@ Other
 .. _`Guido Imperiale`: https://github.com/crusaderky
 .. _`John A Kirkham`: https://github.com/jakirkham
 .. _`Matthew Rocklin`: https://github.com/mrocklin
-.. _`Jim Crist`: https://github.com/jcrist
+.. _`Jim Crist-Hanif`: https://github.com/jcrist
 .. _`James Bourbeau`: https://github.com/jrbourbeau
 .. _`James Munroe`: https://github.com/jmunroe
 .. _`Thomas Caswell`: https://github.com/tacaswell
